@@ -7,6 +7,16 @@
 <script>
   (function () {
     var p = location.pathname;
+
+    // enderecos antigos continuam funcionando
+    var mudados = { "/isa-carvalho-imoveis": "/isa" };
+    for (var velho in mudados) {
+      if (p === velho || p.indexOf(velho + "/") === 0) {
+        location.replace(mudados[velho] + p.slice(velho.length) + location.search + location.hash);
+        return;
+      }
+    }
+
     // endereco sem a barra final vira endereco com barra
     if (!/\/$/.test(p) && !/\.[a-z0-9]{2,5}$/i.test(p)) {
       location.replace(p + "/" + location.search + location.hash);
