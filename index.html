@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Criasiteweb</title>
+<meta name="description" content="Criação de sites para corretores de imóveis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Instrument+Sans:wght@400;500&display=swap">
+<style>
+  :root{--ground:#F5F7F9;--surface:#FFF;--ink:#0E161D;--ink-soft:#55636F;--line:#D8E0E7;
+        --brand:#10406A;--accent:#FF6B2C;--on-accent:#26100A}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+        --ground:#0A1016;--surface:#131B23;--ink:#E3EBF2;--ink-soft:#91A1AF;--line:#253240;
+        --brand:#59A3D8;--accent:#FF8A50}}
+  :root[data-theme="dark"]{--ground:#0A1016;--surface:#131B23;--ink:#E3EBF2;--ink-soft:#91A1AF;
+        --line:#253240;--brand:#59A3D8;--accent:#FF8A50}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--ground);color:var(--ink);
+       font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.55;
+       display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem}
+  main{width:100%;max-width:460px;display:flex;flex-direction:column;gap:1.75rem}
+  .marca{display:flex;align-items:center;gap:.6rem}
+  .marca .ponto{width:12px;height:12px;border-radius:3px;background:var(--accent);flex:none}
+  h1{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:1.6rem;
+     letter-spacing:-.03em;margin:0}
+  .sub{margin:0;color:var(--ink-soft)}
+  .rotulo{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600;
+          color:var(--accent);margin:0 0 .6rem}
+  .cartao{display:flex;align-items:center;gap:.9rem;background:var(--surface);
+          border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem;
+          text-decoration:none;color:var(--ink);transition:border-color .18s ease,transform .18s ease}
+  .cartao:hover,.cartao:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
+  .cartao .t{display:block;font-weight:600}
+  .cartao .d{display:block;font-size:.82rem;color:var(--ink-soft)}
+  .cartao svg{flex:none;color:var(--ink-soft)}
+  footer{font-size:.82rem;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+  <main>
+    <div>
+      <div class="marca"><span class="ponto"></span><h1>Criasiteweb</h1></div>
+      <p class="sub">Criação de sites para corretores de imóveis.</p>
+    </div>
+
+    <section>
+      <p class="rotulo">Trabalhos</p>
+      <a class="cartao" href="/isa-carvalho-imoveis/">
+        <span>
+          <span class="t">Isa Carvalho Imóveis</span>
+          <span class="d">Link na bio com simulador do Minha Casa Minha Vida</span>
+        </span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m9 6 6 6-6 6"/>
+        </svg>
+      </a>
+    </section>
+
+    <footer>Criasiteweb</footer>
+  </main>
+</body>
+</html>
